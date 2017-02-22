@@ -46,7 +46,7 @@ public struct ResponderChain<Base: UIResponder>: ObserverType {
 
 // MARK: - Reactive
 
-fileprivate var responderChainEventObserverContext: UInt8 = 0
+private var responderChainEventObserverContext: UInt8 = 0
 
 public extension Reactive where Base: UIResponder {
     public var responderChain: ResponderChain<Base> {
