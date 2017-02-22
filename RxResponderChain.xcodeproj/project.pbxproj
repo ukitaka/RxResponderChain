@@ -10,6 +10,9 @@
 		261463CC1E5D89B700699242 /* RxResponderChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 261463CA1E5D89B700699242 /* RxResponderChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		261463D71E5D8A1500699242 /* RxResponderChain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463BE1E5D884A00699242 /* RxResponderChain.framework */; };
 		261463E01E5D8A5F00699242 /* RxResponderChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */; };
+		261463E21E5D8AFF00699242 /* UIResponder+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261463E11E5D8AFF00699242 /* UIResponder+Rx.swift */; };
+		261463E61E5D8B7200699242 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; };
+		261463E71E5D8B7200699242 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,9 @@
 		261463CA1E5D89B700699242 /* RxResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RxResponderChain.h; path = Resources/RxResponderChain.h; sourceTree = SOURCE_ROOT; };
 		261463D21E5D8A1500699242 /* RxResponderChainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxResponderChainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxResponderChainTests.swift; sourceTree = "<group>"; };
+		261463E11E5D8AFF00699242 /* UIResponder+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Rx.swift"; sourceTree = "<group>"; };
+		261463E41E5D8B7200699242 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		261463E51E5D8B7200699242 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261463E61E5D8B7200699242 /* RxCocoa.framework in Frameworks */,
+				261463E71E5D8B7200699242 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 				261463C01E5D884A00699242 /* Resources */,
 				261463D31E5D8A1500699242 /* Tests */,
 				261463BF1E5D884A00699242 /* Products */,
+				261463E31E5D8B7100699242 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +90,7 @@
 		261463CD1E5D89D800699242 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				261463E11E5D8AFF00699242 /* UIResponder+Rx.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -99,6 +109,15 @@
 				261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */,
 			);
 			path = RxResponderChainTests;
+			sourceTree = "<group>";
+		};
+		261463E31E5D8B7100699242 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				261463E41E5D8B7200699242 /* RxCocoa.framework */,
+				261463E51E5D8B7200699242 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261463E21E5D8AFF00699242 /* UIResponder+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +365,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -367,6 +391,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -381,6 +409,7 @@
 		261463DB1E5D8A1500699242 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -394,6 +423,7 @@
 		261463DC1E5D8A1500699242 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
