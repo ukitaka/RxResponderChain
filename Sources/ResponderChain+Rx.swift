@@ -6,6 +6,8 @@
 //  Copyright © 2017年 waft. All rights reserved.
 //
 
+#if os(iOS)
+
 import RxSwift
 import RxCocoa
 
@@ -73,3 +75,5 @@ private func castOrFatalError<T>(_ value: Any!) -> T {
     }
     return result
 }
+
+#endif
