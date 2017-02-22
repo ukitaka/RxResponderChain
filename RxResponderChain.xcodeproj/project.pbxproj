@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		261463C31E5D884A00699242 /* RxResponderChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 261463C11E5D884A00699242 /* RxResponderChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		261463CC1E5D89B700699242 /* RxResponderChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 261463CA1E5D89B700699242 /* RxResponderChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		261463D71E5D8A1500699242 /* RxResponderChain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463BE1E5D884A00699242 /* RxResponderChain.framework */; };
+		261463E01E5D8A5F00699242 /* RxResponderChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		261463D81E5D8A1500699242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261463B51E5D884A00699242 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261463BD1E5D884A00699242;
+			remoteInfo = RxResponderChain;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		261463BE1E5D884A00699242 /* RxResponderChain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxResponderChain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		261463C11E5D884A00699242 /* RxResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxResponderChain.h; sourceTree = "<group>"; };
-		261463C21E5D884A00699242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		261463C91E5D89B700699242 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
+		261463CA1E5D89B700699242 /* RxResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RxResponderChain.h; path = Resources/RxResponderChain.h; sourceTree = SOURCE_ROOT; };
+		261463D21E5D8A1500699242 /* RxResponderChainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxResponderChainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxResponderChainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,13 +38,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		261463CF1E5D8A1500699242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261463D71E5D8A1500699242 /* RxResponderChain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		261463B41E5D884A00699242 = {
 			isa = PBXGroup;
 			children = (
-				261463C01E5D884A00699242 /* RxResponderChain */,
+				261463CD1E5D89D800699242 /* Sources */,
+				261463C01E5D884A00699242 /* Resources */,
+				261463D31E5D8A1500699242 /* Tests */,
 				261463BF1E5D884A00699242 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,17 +63,42 @@
 			isa = PBXGroup;
 			children = (
 				261463BE1E5D884A00699242 /* RxResponderChain.framework */,
+				261463D21E5D8A1500699242 /* RxResponderChainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		261463C01E5D884A00699242 /* RxResponderChain */ = {
+		261463C01E5D884A00699242 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				261463C11E5D884A00699242 /* RxResponderChain.h */,
-				261463C21E5D884A00699242 /* Info.plist */,
+				261463C91E5D89B700699242 /* Info.plist */,
+				261463CA1E5D89B700699242 /* RxResponderChain.h */,
 			);
+			name = Resources;
 			path = RxResponderChain;
+			sourceTree = "<group>";
+		};
+		261463CD1E5D89D800699242 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		261463D31E5D8A1500699242 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				261463DD1E5D8A3D00699242 /* RxResponderChainTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		261463DD1E5D8A3D00699242 /* RxResponderChainTests */ = {
+			isa = PBXGroup;
+			children = (
+				261463DE1E5D8A5000699242 /* RxResponderChainTests.swift */,
+			);
+			path = RxResponderChainTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +108,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				261463C31E5D884A00699242 /* RxResponderChain.h in Headers */,
+				261463CC1E5D89B700699242 /* RxResponderChain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +133,41 @@
 			productReference = 261463BE1E5D884A00699242 /* RxResponderChain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		261463D11E5D8A1500699242 /* RxResponderChainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 261463DA1E5D8A1500699242 /* Build configuration list for PBXNativeTarget "RxResponderChainTests" */;
+			buildPhases = (
+				261463CE1E5D8A1500699242 /* Sources */,
+				261463CF1E5D8A1500699242 /* Frameworks */,
+				261463D01E5D8A1500699242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				261463D91E5D8A1500699242 /* PBXTargetDependency */,
+			);
+			name = RxResponderChainTests;
+			productName = RxResponderChainTests;
+			productReference = 261463D21E5D8A1500699242 /* RxResponderChainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		261463B51E5D884A00699242 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = waft;
 				TargetAttributes = {
 					261463BD1E5D884A00699242 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G73SPYZ3Q7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					261463D11E5D8A1500699242 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G73SPYZ3Q7;
 						ProvisioningStyle = Automatic;
@@ -113,12 +187,20 @@
 			projectRoot = "";
 			targets = (
 				261463BD1E5D884A00699242 /* RxResponderChain */,
+				261463D11E5D8A1500699242 /* RxResponderChainTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		261463BC1E5D884A00699242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		261463D01E5D8A1500699242 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +217,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		261463CE1E5D8A1500699242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261463E01E5D8A5F00699242 /* RxResponderChainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		261463D91E5D8A1500699242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 261463BD1E5D884A00699242 /* RxResponderChain */;
+			targetProxy = 261463D81E5D8A1500699242 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		261463C41E5D884A00699242 /* Debug */ = {
@@ -240,13 +338,36 @@
 		261463C71E5D884A00699242 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxResponderChain/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.waft.RxResponderChain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		261463C81E5D884A00699242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G73SPYZ3Q7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -255,24 +376,30 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		261463C81E5D884A00699242 /* Release */ = {
+		261463DB1E5D8A1500699242 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxResponderChain/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.waft.RxResponderChain;
+				PRODUCT_BUNDLE_IDENTIFIER = me.waft.RxResponderChainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		261463DC1E5D8A1500699242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G73SPYZ3Q7;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.waft.RxResponderChainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -294,6 +421,15 @@
 			buildConfigurations = (
 				261463C71E5D884A00699242 /* Debug */,
 				261463C81E5D884A00699242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		261463DA1E5D8A1500699242 /* Build configuration list for PBXNativeTarget "RxResponderChainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				261463DB1E5D8A1500699242 /* Debug */,
+				261463DC1E5D8A1500699242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

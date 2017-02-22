@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "261463D11E5D8A1500699242"
+               BuildableName = "RxResponderChainTests.xctest"
+               BlueprintName = "RxResponderChainTests"
+               ReferencedContainer = "container:RxResponderChain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "261463BD1E5D884A00699242"
+            BuildableName = "RxResponderChain.framework"
+            BlueprintName = "RxResponderChain"
+            ReferencedContainer = "container:RxResponderChain.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
