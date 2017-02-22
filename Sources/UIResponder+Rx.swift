@@ -13,6 +13,21 @@ import RxCocoa
 
 extension Reactive where Base: UIResponder {
 
+    func responderChainEvent<E: RxResponderChainEvent>(event: E) -> Observable<E> {
+        Mirror
+    }
+
 }
 
 #endif
+
+/*
+ 
+ self.rx.responderChain.on(myCustomEvent)
+ 
+ 
+ self.rx.responderChain.event(MyCustomEvent) // Observable<MyCustomEvent>
+    .subscribe()
+    ...
+ 
+ */

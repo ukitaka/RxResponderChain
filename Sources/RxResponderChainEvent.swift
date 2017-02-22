@@ -9,4 +9,5 @@
 import RxSwift
 
 public protocol RxResponderChainEvent {
+    
 }
