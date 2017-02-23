@@ -1,0 +1,5 @@
+included:
+    - Sources/
+
+line_length: 130
+file_length: 500
