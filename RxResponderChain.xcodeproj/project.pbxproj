@@ -13,6 +13,14 @@
 		261463E21E5D8AFF00699242 /* ResponderChain+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261463E11E5D8AFF00699242 /* ResponderChain+Rx.swift */; };
 		261463E61E5D8B7200699242 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; };
 		261463E71E5D8B7200699242 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; };
+		E807502C1E5E597E00005DDB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; };
+		E807502D1E5E597E00005DDB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; };
+		E80750301E5E597E00005DDB /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E807502E1E5E597E00005DDB /* RxBlocking.framework */; };
+		E80750311E5E597E00005DDB /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E807502F1E5E597E00005DDB /* RxTest.framework */; };
+		E8F330A31E5E607A00898A5F /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E807502E1E5E597E00005DDB /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8F330A41E5E607A00898A5F /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E807502F1E5E597E00005DDB /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8F330A51E5E607A00898A5F /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8F330A61E5E607A00898A5F /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +33,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E8F330A21E5E606D00898A5F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E8F330A31E5E607A00898A5F /* RxBlocking.framework in CopyFiles */,
+				E8F330A41E5E607A00898A5F /* RxTest.framework in CopyFiles */,
+				E8F330A51E5E607A00898A5F /* RxCocoa.framework in CopyFiles */,
+				E8F330A61E5E607A00898A5F /* RxSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		261463BE1E5D884A00699242 /* RxResponderChain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxResponderChain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		261463C91E5D89B700699242 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -34,6 +58,8 @@
 		261463E11E5D8AFF00699242 /* ResponderChain+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResponderChain+Rx.swift"; sourceTree = "<group>"; };
 		261463E41E5D8B7200699242 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		261463E51E5D8B7200699242 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E807502E1E5E597E00005DDB /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		E807502F1E5E597E00005DDB /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80750301E5E597E00005DDB /* RxBlocking.framework in Frameworks */,
+				E80750311E5E597E00005DDB /* RxTest.framework in Frameworks */,
+				E807502C1E5E597E00005DDB /* RxCocoa.framework in Frameworks */,
+				E807502D1E5E597E00005DDB /* RxSwift.framework in Frameworks */,
 				261463D71E5D8A1500699242 /* RxResponderChain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +144,8 @@
 		261463E31E5D8B7100699242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E807502E1E5E597E00005DDB /* RxBlocking.framework */,
+				E807502F1E5E597E00005DDB /* RxTest.framework */,
 				261463E41E5D8B7200699242 /* RxCocoa.framework */,
 				261463E51E5D8B7200699242 /* RxSwift.framework */,
 			);
@@ -159,6 +191,7 @@
 				261463CE1E5D8A1500699242 /* Sources */,
 				261463CF1E5D8A1500699242 /* Frameworks */,
 				261463D01E5D8A1500699242 /* Resources */,
+				E8F330A21E5E606D00898A5F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -411,6 +444,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -425,6 +462,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G73SPYZ3Q7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
