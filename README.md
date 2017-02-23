@@ -54,6 +54,7 @@ final class TweetListViewController: UIViewController {
 
 + Swift 3.0 / Xcode 8.2
 + iOS 9.0 or later
++ RxSwift / RxCocoa ~> 3.0
 
 ## Installation
 
