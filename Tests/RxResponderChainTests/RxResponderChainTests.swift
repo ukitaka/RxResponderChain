@@ -61,22 +61,22 @@ class RxResponderChainTests: XCTestCase {
         scheduler.scheduleAt(0) {
             view.rx.responderChain.event(TestEvent.self)
                 .subscribe(observerForView)
-                .addDisposableTo(self.disposeBag)
+                .disposed(by: self.disposeBag)
 
             viewController.rx.responderChain.event(TestEvent.self)
                 .subscribe(observerForVC)
-                .addDisposableTo(self.disposeBag)
+                .disposed(by:self.disposeBag)
 
             subview2.rx.responderChain.event(TestEvent.self)
                 .subscribe(observerForSubview)
-                .addDisposableTo(self.disposeBag)
+                .disposed(by:self.disposeBag)
 
             view.rx.responderChain.event(TestEvent2.self)
                 .subscribe(observerForTestEvent2)
-                .addDisposableTo(self.disposeBag)
+                .disposed(by:self.disposeBag)
 
             xs.bind(to:viewController.view.rx.responderChain)
-                .addDisposableTo(self.disposeBag)
+                .disposed(by:self.disposeBag)
         }
 
         scheduler.start()
