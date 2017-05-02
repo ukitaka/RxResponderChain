@@ -75,7 +75,7 @@ class RxResponderChainTests: XCTestCase {
                 .subscribe(observerForTestEvent2)
                 .addDisposableTo(self.disposeBag)
 
-            xs.bindTo(viewController.view.rx.responderChain)
+            xs.bind(to:viewController.view.rx.responderChain)
                 .addDisposableTo(self.disposeBag)
         }
 
