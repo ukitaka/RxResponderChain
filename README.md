@@ -24,8 +24,8 @@ final class TweetCell: UITableViewCell {
 
         likeButton.rx.tap
             .map { _ in LikeTweetEvent(tweetID: self.tweet.id) }
-            .bindTo(self.rx.responderChain)
-            .addDisposableTo(disposeBag)
+            .bind(to:self.rx.responderChain)
+            .disposed(by:disposeBag)
     }
 }
 ```
@@ -43,7 +43,7 @@ final class TweetListViewController: UIViewController {
         self.rx.responderChain.event(LikeTweetEvent.self)
             .flatMapFirst { e in twitterService.like(tweetID: e.tweetID) }
             .subscribe()
-            .addDisposableTo(disposeBag)
+            .disposed(by:disposeBag)
     }
 }
 ```
@@ -52,16 +52,16 @@ final class TweetListViewController: UIViewController {
 
 `RxResponderChain` requires / supports the following environments:
 
-+ Swift 3.0 / Xcode 8.2
++ Swift 3.1 / Xcode 8.3
 + iOS 9.0 or later
-+ RxSwift / RxCocoa ~> 3.0
++ RxSwift / RxCocoa ~> 3.4
 
 ## Installation
 
 ### Carthage
 
 ```ruby
-github “ukitaka/RxResponderChain” ~> 1.0
+github “ukitaka/RxResponderChain” ~> 1.1
 ```
 
 
@@ -69,6 +69,6 @@ github “ukitaka/RxResponderChain” ~> 1.0
 
 ```ruby
 use_frameworks!
-pod "RxResponderChain", "~> 1.0"
+pod "RxResponderChain", "~> 1.1"
 ```
 
