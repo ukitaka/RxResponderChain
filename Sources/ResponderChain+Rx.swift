@@ -71,13 +71,13 @@ public extension Reactive where Base: UIResponder {
 public extension ObservableType where E: ResponderChainEvent {
 
     @available(*, deprecated, renamed: "bind(to:)")
-    public func bindTo<O>(_ observer: O) -> Disposable where O : ObserverType, O.E == Self.E {
+    public func bindTo<O>(_ observer: O) -> Disposable where O: ObserverType, O.E == Self.E {
         return bind(to: observer)
     }
 
     public func bind<O: ObserverType>(to observer: O) -> Disposable where O.E == ResponderChainEvent {
         return self.map { $0 as ResponderChainEvent }
-            .bind(to:observer)
+            .bind(to: observer)
     }
 }
 
