@@ -61,7 +61,7 @@ final class TweetListViewController: UIViewController {
 ### Carthage
 
 ```ruby
-github “ukitaka/RxResponderChain” ~> 2.0
+github "ukitaka/RxResponderChain" ~> 2.0
 ```
 
 
