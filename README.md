@@ -52,9 +52,9 @@ final class TweetListViewController: UIViewController {
 
 `RxResponderChain` requires / supports the following environments:
 
-+ Swift 4.1 / Xcode 9.3
++ Swift 5.1.2 / Xcode 11.2
 + iOS 9.0 or later
-+ RxSwift / RxCocoa ~> 4.1
++ RxSwift / RxCocoa ~> 5.0
 
 ## Installation
 
@@ -71,4 +71,3 @@ github "ukitaka/RxResponderChain" ~> 2.0
 use_frameworks!
 pod "RxResponderChain", "~> 2.0"
 ```
-
