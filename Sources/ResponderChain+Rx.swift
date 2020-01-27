@@ -10,6 +10,7 @@
 
 import RxSwift
 import RxCocoa
+import RxRelay
 
 // MARK: - ResponderChainEvent
 
@@ -49,7 +50,7 @@ public struct ResponderChain<Base: UIResponder>: ObserverType {
 private var responderChainEventObserverContext: UInt8 = 0
 
 public extension Reactive where Base: UIResponder {
-    public var responderChain: ResponderChain<Base> {
+    var responderChain: ResponderChain<Base> {
         return ResponderChain(self)
     }
 
@@ -68,14 +69,14 @@ public extension Reactive where Base: UIResponder {
 
 // MARK: - Bind
 
-public extension ObservableType where E: ResponderChainEvent {
+public extension ObservableType where Element: ResponderChainEvent {
 
     @available(*, deprecated, renamed: "bind(to:)")
-    public func bindTo<O>(_ observer: O) -> Disposable where O: ObserverType, O.E == Self.E {
+    func bindTo<O>(_ observer: O) -> Disposable where O: ObserverType, O.Element == Self.Element {
         return bind(to: observer)
     }
 
-    public func bind<O: ObserverType>(to observer: O) -> Disposable where O.E == ResponderChainEvent {
+    func bind<O: ObserverType>(to observer: O) -> Disposable where O.Element == ResponderChainEvent {
         return self.map { $0 as ResponderChainEvent }
             .bind(to: observer)
     }
@@ -86,7 +87,7 @@ public extension ObservableType where E: ResponderChainEvent {
 private func castOrFatalError<T>(_ value: Any!) -> T {
     let maybeResult: T? = value as? T
     guard let result = maybeResult else {
-        fatalError("Failure converting from \(value) to \(T.self)")
+        fatalError("Failure converting from \(value.map { "\($0)" } ?? "") to \(T.self)")
     }
     return result
 }

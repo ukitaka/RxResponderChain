@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency "RxSwift", "~> 4.1"
-  s.dependency "RxCocoa", "~> 4.1"
+  s.dependency "RxSwift", "~> 5.0"
+  s.dependency "RxCocoa", "~> 5.0"
 end
-

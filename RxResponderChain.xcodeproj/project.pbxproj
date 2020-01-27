@@ -13,6 +13,7 @@
 		261463E21E5D8AFF00699242 /* ResponderChain+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261463E11E5D8AFF00699242 /* ResponderChain+Rx.swift */; };
 		261463E61E5D8B7200699242 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; };
 		261463E71E5D8B7200699242 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; };
+		5F629E1223DED1C9005B1124 /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F629E1123DED1C9005B1124 /* RxRelay.framework */; };
 		E807502C1E5E597E00005DDB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E41E5D8B7200699242 /* RxCocoa.framework */; };
 		E807502D1E5E597E00005DDB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261463E51E5D8B7200699242 /* RxSwift.framework */; };
 		E80750301E5E597E00005DDB /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E807502E1E5E597E00005DDB /* RxBlocking.framework */; };
@@ -40,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5F629E1223DED1C9005B1124 /* RxRelay.framework in CopyFiles */,
 				E8F330A31E5E607A00898A5F /* RxBlocking.framework in CopyFiles */,
 				E8F330A41E5E607A00898A5F /* RxTest.framework in CopyFiles */,
 				E8F330A51E5E607A00898A5F /* RxCocoa.framework in CopyFiles */,
@@ -58,6 +60,7 @@
 		261463E11E5D8AFF00699242 /* ResponderChain+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResponderChain+Rx.swift"; sourceTree = "<group>"; };
 		261463E41E5D8B7200699242 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		261463E51E5D8B7200699242 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5F629E1123DED1C9005B1124 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		E807502E1E5E597E00005DDB /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		E807502F1E5E597E00005DDB /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +236,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 261463B41E5D884A00699242;
@@ -276,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
