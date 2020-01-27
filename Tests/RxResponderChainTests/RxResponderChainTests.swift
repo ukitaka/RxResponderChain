@@ -46,10 +46,10 @@ class RxResponderChainTests: XCTestCase {
         let scheduler = TestScheduler(initialClock: 0)
 
         let xs = scheduler.createHotObservable([
-            next(100, TestEvent(a: 1)),
-            next(200, TestEvent(a: 2)),
-            next(300, TestEvent(a: 3)),
-            next(400, TestEvent(a: 4)),
+            Recorded.next(100, TestEvent(a: 1)),
+            Recorded.next(200, TestEvent(a: 2)),
+            Recorded.next(300, TestEvent(a: 3)),
+            Recorded.next(400, TestEvent(a: 4)),
         ])
 
         let observerForView = scheduler.createObserver(TestEvent.self)
@@ -82,10 +82,10 @@ class RxResponderChainTests: XCTestCase {
         scheduler.start()
 
         let expectedEvent = [
-            next(100, TestEvent(a: 1)),
-            next(200, TestEvent(a: 2)),
-            next(300, TestEvent(a: 3)),
-            next(400, TestEvent(a: 4)),
+            Recorded.next(100, TestEvent(a: 1)),
+            Recorded.next(200, TestEvent(a: 2)),
+            Recorded.next(300, TestEvent(a: 3)),
+            Recorded.next(400, TestEvent(a: 4)),
         ]
 
         XCTAssertEqual(observerForView.events, expectedEvent)
